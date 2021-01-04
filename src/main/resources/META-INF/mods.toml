@@ -1,12 +1,12 @@
 modLoader="javafml" #mandatory
 
-loaderVersion="[28,)" #mandatory
+loaderVersion="[31,)" #mandatory
 
 [[mods]] #mandatory
 
 modId="xlifehealth" #mandatory
 
-version="1.4.3" #mandatory
+version="1.5.3" #mandatory
 
 displayName="X Life Health Mod" #mandatory
 
@@ -21,6 +21,6 @@ description="X Life Health Mod Made By DaqEm."
 [[dependencies.xlifehealth]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.4]"
+    versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"

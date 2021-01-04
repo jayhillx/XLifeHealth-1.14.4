@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: XLifeHealth 1.15.2
+Implementation-Version: 1.0
+Specification-Vendor: examplemodsareus
+Specification-Title: xlifehealth
+Implementation-Timestamp: 2021-01-04T14:19:04-0500
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+

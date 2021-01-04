@@ -17,7 +17,7 @@ public class XLifeModifiers {
 
     public static void removeMaxHealthModifiers(PlayerEntity player) {
         IAttributeInstance iAttributeInstance = player.getAttribute(SharedMonsterAttributes.MAX_HEALTH);
-        Collection<AttributeModifier> modifiers = iAttributeInstance.getModifiers();
+        Collection<AttributeModifier> modifiers = iAttributeInstance.func_225505_c_();
         for (AttributeModifier modifier : modifiers) {
             if (modifier.getName().equals("MaxHealth")) {
                 iAttributeInstance.removeModifier(modifier);

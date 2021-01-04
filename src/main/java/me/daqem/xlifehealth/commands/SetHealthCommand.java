@@ -59,8 +59,8 @@ public final class SetHealthCommand {
         SendMessage.sendFeedback(source, TextFormatting.GOLD + "About X Life!");
         SendMessage.sendFeedback(source, TextFormatting.GOLD + " ");
         SendMessage.sendFeedback(source, TextFormatting.WHITE + "Author: DaqEm");
-        SendMessage.sendFeedback(source, TextFormatting.WHITE + "Minecraft version: 1.14.4");
-        SendMessage.sendFeedback(source, TextFormatting.WHITE + "Created on Forge 28.2.0");
+        SendMessage.sendFeedback(source, TextFormatting.WHITE + "Minecraft version: 1.15.2");
+        SendMessage.sendFeedback(source, TextFormatting.WHITE + "Created on Forge 31.2.47");
         SendMessage.sendFeedback(source, TextFormatting.WHITE + "Report bugs to: daqemyt@gmail.com");
         SendMessage.sendFeedback(source, TextFormatting.YELLOW + " ");
         SendMessage.sendFeedback(source, TextFormatting.YELLOW + "=====================================");
