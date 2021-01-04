@@ -4,9 +4,9 @@ import me.daqem.xlifehealth.commands.SetHealthCommand;
 import me.daqem.xlifehealth.events.HealthEvents;
 import me.daqem.xlifehealth.utils.SendMessage;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.*;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 class SideProxy {
@@ -28,9 +28,9 @@ class SideProxy {
     }
 
     @SubscribeEvent
-    public void serverStarting(FMLServerStartingEvent event) {
+    public void serverStarting(RegisterCommandsEvent event) {
         SendMessage.sendLogger("Server started.");
-        SetHealthCommand.register(event.getCommandDispatcher());
+        SetHealthCommand.register(event.getDispatcher());
     }
 
     /**

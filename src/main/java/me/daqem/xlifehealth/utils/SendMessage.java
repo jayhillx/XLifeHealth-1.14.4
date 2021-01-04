@@ -9,7 +9,7 @@ import net.minecraft.util.text.TranslationTextComponent;
 public class SendMessage {
 
     public static void sendMessage(PlayerEntity player, String message) {
-        player.sendMessage(new KeybindTextComponent(message));
+        player.sendMessage(new KeybindTextComponent(message), player.getUniqueID());
     }
 
     public static void sendFeedback(CommandSource source, String message) {

@@ -1,8 +1,8 @@
 package me.daqem.xlifehealth.utils;
 
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.IAttributeInstance;
+import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.attributes.ModifiableAttributeInstance;
 import net.minecraft.entity.player.PlayerEntity;
 
 import java.util.Collection;
@@ -10,19 +10,18 @@ import java.util.Collection;
 public class XLifeModifiers {
 
     public static void applyMaxHealthModifier(PlayerEntity player, float amount) {
-        IAttributeInstance attribute = player.getAttribute(SharedMonsterAttributes.MAX_HEALTH);
-        attribute.applyModifier(new AttributeModifier("MaxHealth", amount, AttributeModifier.Operation.ADDITION));
+        ModifiableAttributeInstance attribute = player.getAttribute(Attributes.MAX_HEALTH);
+        attribute.applyPersistentModifier(new AttributeModifier("MaxHealth", amount, AttributeModifier.Operation.ADDITION));
         player.setHealth(player.getMaxHealth());
     }
 
     public static void removeMaxHealthModifiers(PlayerEntity player) {
-        IAttributeInstance iAttributeInstance = player.getAttribute(SharedMonsterAttributes.MAX_HEALTH);
-        Collection<AttributeModifier> modifiers = iAttributeInstance.func_225505_c_();
+        ModifiableAttributeInstance iAttributeInstance = player.getAttribute(Attributes.MAX_HEALTH);
+        Collection<AttributeModifier> modifiers = iAttributeInstance.getModifierListCopy();
         for (AttributeModifier modifier : modifiers) {
             if (modifier.getName().equals("MaxHealth")) {
                 iAttributeInstance.removeModifier(modifier);
             }
         }
     }
-
 }
